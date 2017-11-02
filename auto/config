@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto --clean \
+    --ignore-system-defaults \
+    --mode debian \
+    --distribution stretch \
+    --apt-indices false \
+    --iso-application "Asset Provisioning" \
+    --iso-preparer "Gabriel Miklos" \
+    --iso-publisher "Gabriel" \
+    --iso-volume "assetprov" \
+    --linux-packages "linux-image linux-headers" \
+    --archive-areas "main contrib non-free" \
+    --source false "${@}"
+

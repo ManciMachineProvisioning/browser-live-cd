@@ -1,0 +1,10 @@
+#!/bin/sh
+PROVISION_URL=$(cat /proc/cmdline | sed -e 's/^.*provision_url=//' -e 's/ .*$//')
+
+export XCURSOR_THEME=DMZ-White
+xsetroot -cursor_name left_ptr
+
+/usr/bin/provisioning-browser $PROVISION_URL
+
+/usr/bin/sudo /sbin/reboot -f
+sleep 10000

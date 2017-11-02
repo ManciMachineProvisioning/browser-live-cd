@@ -1,0 +1,12 @@
+xorg
+xserver-xorg-input-all
+xserver-xorg-video-all
+
+nodm
+libwebkit2gtk-4.0-37
+
+fonts-roboto
+
+plymouth
+plymouth-x11
+dmz-cursor-theme
